@@ -1,32 +1,113 @@
-# React + TypeScript + Vite
+# BMI Calculator + Goal Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple and responsive **BMI Calculator + Goal Tracker** built with React and TypeScript. It calculates BMI live as the user enters their height and weight and allows users to save and manage previous BMI calculations.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* 🎯 **Live BMI Calculation** — BMI updates automatically as height and weight change.
+* 📝 **Controlled Inputs** — Height and weight are managed using React state.
+* 💾 **Save Entries** — Save valid BMI calculations to a history list.
+* 📋 **Entry History** — View previously saved BMI calculations.
+* 🗑️ **Delete Entries** — Remove individual saved entries.
+* 📊 **BMI Categories** — Underweight, Normal weight, Overweight, and Obese.
+* 🛡️ **Input Validation** — Handles empty, zero, and invalid values safely.
+* 📱 **Responsive UI** — Works across different screen sizes.
 
-## React Compiler
+## 🧮 BMI Formula
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```text
+BMI = weight (kg) / height (m)²
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Example:
+
+```text
+Height: 170 cm
+Weight: 65 kg
+
+BMI = 65 / (1.70 × 1.70)
+BMI = 22.49
+```
+
+### BMI Categories
+
+| BMI         | Category      |
+| ----------- | ------------- |
+| < 18.5      | Underweight   |
+| 18.5 – 24.9 | Normal weight |
+| 25 – 29.9   | Overweight    |
+| ≥ 30        | Obese         |
+
+## 🛠️ Tech Stack
+
+* React
+* TypeScript
+* Vite
+* CSS
+* Oxlint
+
+## 📁 Project Structure
+
+```text
+bmi-calculator/
+├── src/
+│   ├── components/
+│   │   ├── BMICalculator.tsx
+│   │   ├── BMIResult.tsx
+│   │   ├── EntryList.tsx
+│   │   └── EntryItem.tsx
+│   ├── bmi.ts
+│   ├── types.ts
+│   ├── App.tsx
+│   ├── App.css
+│   └── index.css
+├── index.html
+├── package.json
+└── README.md
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Node.js
+* npm
+
+### Installation
+
+```bash
+git clone https://github.com/AbdulhamidN/bmi-calculator-shiera-m4w2.git
+cd bmi-calculator-shiera-m4w2
+npm install
+```
+
+### Run Locally
+
+```bash
+npm run dev
+```
+
+The application will be available at the local URL shown in the terminal, usually:
+
+```text
+http://localhost:5173
+```
+
+## 🔍 Validation
+
+The project was validated with:
+
+```bash
+npm run lint
+npm run build
+```
+
+Both checks pass successfully.
+
+## 🌐 Live Demo
+
+[View the BMI Calculator](https://bmi-calculator-on-m4w2.vercel.app/)
+
+## 📄 License
+
+This project is created for educational and learning purposes.
